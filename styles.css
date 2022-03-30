@@ -72,7 +72,7 @@ p, span {
 
 /* nav section */
 nav {
-    position: absolute;
+    position: fixed;
     top: 0; left: 0;
     width: 100%;
     display: flex;
@@ -89,10 +89,12 @@ nav h1 {
     z-index: 10;
 }
 .navbar {
+    position: absolute;
+    padding: 60px 25px 25px 25px;
     width: 100%;
-    padding: 25px;
     background: black;
-    height: calc(100vh - 60px);
+    top: 0;
+    height: 100vh;
     transform: translateY(-100vh);
     transition: transform 300ms ease-in;
     z-index: 9;
