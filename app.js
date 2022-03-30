@@ -6,6 +6,7 @@ const navElement = document.querySelector('nav')
 const navbar = document.querySelector('.navbar')
 const navLinks = document.querySelectorAll('.nav-link')
 
+// toggles navbar on and off
 const toggleNav = () => {
     if (hamburger.classList.contains('navbar-x')) {
         hamburger.classList.remove('navbar-x')
@@ -19,12 +20,8 @@ const toggleNav = () => {
     }
 }
 
-console.log(navElement)
-
-// navLinks.forEach(e => {
-//     e.
-// })
-
-// console.log(navLinks)
+navLinks.forEach(e => {
+    e.addEventListener('click', toggleNav)
+})
 
 hamburger.addEventListener('click', toggleNav)
