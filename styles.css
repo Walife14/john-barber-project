@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'Heebo', sans-serif;
+    color: #fff;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* general styles */
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* background image */
+.bg-img-container {
+    position: relative;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.bg-img-container img {
+    height: 100%;
+    transform: translateX(-20%);
+}
+.bg-img-container > div {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* nav section */
+nav {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav h1 {
+    text-transform: uppercase;
+    padding-left: 25px;
+    height: 60px;
+    line-height: 60px;
+    flex: 1;
+    z-index: 10;
+}
+.navbar {
+    width: 100%;
+    padding: 25px;
+    background: black;
+    height: calc(100vh - 60px);
+    transform: translateY(-100vh);
+    transition: transform 300ms ease-in;
+    z-index: 9;
+}
+.navbar.show {
+    transform: translateY(0);
+}
+.nav-item {
+}
+.nav-link {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 24px;
+    display: block;
+}
+
+/* index */
+.index-section {
+    height: 100vh;
+}
+.index-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.phone-icon {
+    height: 15px;
+}
+
+/* services section */
+.services {
+    height: 100vh;
+}
+.services-container {
+    background: black;
+}
+.services-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+}
+
+/* Hamburger */
+.hamburger {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 25px;
+    margin-right: 25px;
+    z-index: 10;
+}
+.hamburger span {
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    transition: transform 250ms linear;
+}
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+.hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hamburger span:nth-child(3) {
+    bottom: 0;
+}
+.hamburger.navbar-x span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 7.5px;
+}
+.hamburger.navbar-x span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 7.5px;
+}
+.hamburger.navbar-x span:nth-child(2) {
+    display: none;
+}
