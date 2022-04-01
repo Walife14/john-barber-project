@@ -25,3 +25,49 @@ navLinks.forEach(e => {
 })
 
 hamburger.addEventListener('click', toggleNav)
+
+// change display data on 'the team'
+
+const teamData = [
+    {
+        name: 'Spencer',
+        description: 'Spencer is a well rounded barber with a lot of experience with short hair, he has been taught from a young age and has grown in the barber industry.',
+        number: '07999 000000',
+        email: 'spencer@email.com'
+    },
+    {
+        name: 'Paul',
+        description: 'Paul is a very experienced stylist who has an educational background, has taken travelled across and learned various techniques during his years in the field.',
+        number: '07888 000000',
+        email: 'paul@email.com'
+    },
+    {
+        name: 'Paula',
+        description: 'Paula has experience as a stylist for women and men, a well rounded and experienced invidivual who strives to develop her skills and perform as best to her capabilities.',
+        number: '07777 000000',
+        email: 'paula@email.com'
+    }
+]
+
+const teamName = document.querySelector('#team-name')
+const teamDescription = document.querySelector('#team-description')
+const teamNumber = document.querySelector('#team-number')
+const teamEmail = document.querySelector('#team-email')
+const teamList = document.querySelectorAll('.team-list-item')
+
+// changes data in the team section to the selected member
+const changeTeamData = (e, i) => {
+    if (e.classList.contains('selected')) return
+    teamList.forEach(e => e.classList.remove('selected'))
+    e.classList.add('selected')
+    const member = teamData[i]
+    teamName.innerHTML = member.name
+    teamDescription.innerHTML = member.description
+    teamNumber.innerHTML = member.number
+    teamEmail.innerHTML = member.email
+}
+
+// listening to clicks on all of the team members
+teamList.forEach((e, i) => {
+    e.addEventListener('click', () => changeTeamData(e, i))
+})

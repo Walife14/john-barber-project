@@ -167,6 +167,9 @@ nav h1 {
     font-size: 24px;
     padding: 5px 0;
 }
+.team-list-item.selected {
+    transform: translateY(20px);
+}
 .team-description-container {
     margin: 25px;    
 }
