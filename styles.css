@@ -130,18 +130,34 @@ nav h1 {
     height: 15px;
 }
 
+/* about */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--dark-grey);
+    height: 50vh;
+}
+
+.about p {
+    text-align: justify;
+    margin: 0 25px;
+}
+
 /* services section */
 .services {
-    height: 100vh;
-}
-.services-container {
+    height: 50vh;
     background: var(--dark-grey);
 }
-.services-container ul {
+.services ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 25px;
+    margin: 25px;
+}
+.services ul li {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* the team section */
@@ -178,6 +194,9 @@ nav h1 {
     font-size: 24px;
     font-weight: 700;
 }
+.team-description-container p {
+    text-align: justify;
+}
 .team-contact {
     display: flex;
     margin: 25px 25px;
@@ -194,9 +213,10 @@ footer {
     font-size: 12px;
     padding: 25px;
 }
-footer ul {
+footer > ul {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .address-info-container {
     display: flex;
@@ -205,6 +225,10 @@ footer ul {
 .hours-container {
     display: flex;
     flex-direction: column;
+}
+.hours-container ul li {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Hamburger */
