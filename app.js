@@ -1,5 +1,6 @@
-
+// --------------------
 // nav toggle
+// --------------------
 
 const hamburger = document.querySelector('.hamburger')
 const navElement = document.querySelector('nav')
@@ -26,7 +27,9 @@ navLinks.forEach(e => {
 
 hamburger.addEventListener('click', toggleNav)
 
+// --------------------
 // change display data on 'the team'
+// --------------------
 
 const teamData = [
     {
@@ -71,3 +74,26 @@ const changeTeamData = (e, i) => {
 teamList.forEach((e, i) => {
     e.addEventListener('click', () => changeTeamData(e, i))
 })
+
+// --------------------
+// change bg-img-container img if the team is on screen
+// --------------------
+
+const bgImg = document.querySelector('#bg-img')
+
+const img1 = './img/barber-shop-mobile.jpg'
+const img2 = './img/bg-products.jpg'
+
+const observerBG = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // add new bg
+            bgImg.src = img2
+            return
+        }
+        // replace with old bg img
+        bgImg.src = img1
+    })
+})
+
+observerBG.observe(document.querySelector('.team'))
