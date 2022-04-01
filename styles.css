@@ -79,6 +79,7 @@ nav {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 10;
 }
 nav h1 {
     text-transform: uppercase;
